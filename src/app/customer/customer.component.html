@@ -1,0 +1,65 @@
+<div>
+    <h1> MASTER DETAILS</h1>
+  </div>
+  <style>
+  
+    .info-table td {
+      padding: 25px;
+    } 
+  
+  
+  
+    table.table-result  {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table-result td, .table-result th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  </style> 
+  <table  class="table table-bordered">
+    <tr>
+      <td>
+        <div class="form-group">
+          <div class="col-xs-6">
+          <label>Master No</label>
+          <br />
+          <input type="text" name="sampleNo" class="form-control" [value]="customer.sampleNo"disabled/>
+          </div>          
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <div class="col-xs-6">
+          <label>Date</label>
+          <br />
+          <input type="text" id="sampleDate" class="form-control" [(ngModel)]="customer.sampleDate" />
+        </div>
+      </div>
+      </td>
+      <td>
+        <td>
+            <div class="form-group">
+              <div class="col-xs-6">
+              <label>CustomerName</label>
+              <br />
+              <input type="text" id="customerName" class="form-control" [(ngModel)]="customer.customerName" />
+            </div>
+          </div>
+          </td>
+          <tr>
+          <td>
+            <div class="form-group">
+              <button type="button" class="btn btn-primary" (click)="onRegister()" *ngIf="!updateFlag"> SAVE</button>
+              <button type="button" class="btn btn-primary" (click)="onUpdate()" *ngIf="updateFlag"> UPDATE</button>
+        </div>
+          </td> 
+           <!-- <td>
+            <div class="form-group">
+              <button type="button" class="btn btn-primary" (click)="onRegister()" > NEW</button>
+        </div>
+          </td>   -->
+        </tr>     
